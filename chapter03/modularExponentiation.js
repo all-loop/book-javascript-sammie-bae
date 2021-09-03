@@ -29,4 +29,8 @@ function modularExponentiation(base = 1, exp = 1, mod = 1) {
 }
 
 const val = modularExponentiation(4, 13, 497);
-console.log(val);
+// console.log(val);
+
+module.exports = {
+  modularExponentiation,
+};
