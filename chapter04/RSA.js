@@ -1,5 +1,32 @@
 /**
+ * author: Sammie Bae
  *
+ * RSA es un algoritmo sumamente popula en la encriptación, y se basa
+ * en la dificultad que tienen las computadoras para factorizar grandes
+ * números enteros.
+ *
+ * Su ciclo de uso es:
+ *  1. Generación de claves (clave pública y clave privada)
+ *  2. Encriptación del mensaje
+ *  3. Desencriptación del mensaje
+ *
+ * De manera general el algoritmo se resume en:
+ * -------------------------------------------
+ * 1. Seleccionar 2 números primos p, q grandes:
+ *  a. El producto de p y q es llamado n
+ *  b. El producto de (p-1) y (q-1) es llamado phi
+ *
+ * 2. Escoger dos exponentes, e y d:
+ *  a. 'e' es típicamente 3. Otros valores mayores a 2 pueden ser usados
+ *  b. 'd' es un valor tal que (e * d) % phi = 1
+ *
+ * 3. Encriptación del mensaje:
+ *  . m como mensaje, entonces:
+ *  . (m ^ e) % n = c
+ *  . c como mensaje encriptado
+ *
+ * 4. Desencriptación del mensaje:
+ *  . (c ^ d) % n = m
  */
 
 const { isPrimeFactorized } = require("../chapter03/primarilyTest");
